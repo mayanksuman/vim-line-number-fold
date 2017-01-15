@@ -40,10 +40,8 @@ endfunction
 function UpdateNumberByFocus(curr_focus)
 	if (a:curr_focus==0)
 		call UpdateNumberByMode(1)
-		echom "Focus lost"
-	elseif (g:is_insert_mode==1)
-		call UpdateNumberByMode(1)
 	else
+		" When focus is gained: It is always a Normal mode
 		call UpdateNumberByMode(0)
 	endif
 endfunction
