@@ -1,6 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Vim- Line-Number-Fold
-"" Vim Plugin excellent line number suppoert in
+"" Vim Plugin for line number support in
 "" Normal, Insert and Folded Code
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -67,7 +67,9 @@ autocmd FocusLost * :call UpdateNumberByFocus(0)
 autocmd FocusGained * :call UpdateNumberByFocus(1)
 autocmd WinLeave * :call UpdateNumberByFocus(0)
 autocmd WinEnter * :call UpdateNumberByFocus(1)
-"
+autocmd CmdwinLeave * :call UpdateNumberByFocus(0)
+autocmd CmdwinEnter * :call UpdateNumberByFocus(1)
+
 " Switch to absolute line numbers when entering insert mode and switch
 " back to relative line numbers when switching back to normal mode.
 autocmd InsertEnter * :call UpdateNumberByMode(1)
